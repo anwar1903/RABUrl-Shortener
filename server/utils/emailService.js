@@ -1,3 +1,4 @@
+// emailService.js
 const nodemailer = require('nodemailer');
 
 const sendEmail = async (to, subject, text) => {
@@ -7,7 +8,7 @@ const sendEmail = async (to, subject, text) => {
         port: 465,
         auth: {
             user: 'anwarbatcha190300@gmail.com',
-            pass: `attb ncuo smvi rdoc`,
+            pass: `${process.env.GMAIL_PASS}`,
         },
     });
 
